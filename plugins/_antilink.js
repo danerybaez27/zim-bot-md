@@ -13,7 +13,7 @@ if (isBotAdmin) {
 const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
 if (m.text.includes(linkThisGroup)) return !0
 }    
-await conn.sendButton(m.chat, `*ZIMBOT ANTILINK*\n*BYE👋, ${await this.getName(m.sender)} YOU HAVE SEND GROUP LINK SORRY IM KICKING UR ASS NOW*${isBotAdmin ? '' : '\n\n*[𝐈𝐍𝐅𝐎 ZIM-BOT IS NOT ADMIN PLEASE GIVE BOT ADMINSHIP IN ORDER TO USE THIS CMD]*'}`, author, ['ANTILINK OFF', '/disable antilink'], m)    
+await conn.sendButton(m.chat, `* ANTILINK*\n*BYE👋, ${await this.getName(m.sender)} YOU HAVE SEND GROUP LINK SORRY IM KICKING UR ASS NOW*${isBotAdmin ? '' : '\n\n*[𝐈𝐍𝐅𝐎 ZIM-BOT IS NOT ADMIN PLEASE GIVE BOT ADMINSHIP IN ORDER TO USE THIS CMD]*'}`, author, ['ANTILINK OFF', '/disable antilink'], m)    
 if (isBotAdmin && bot.restrict) {
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 } else if (!bot.restrict) return m.reply('*#𝚎𝚗𝚊𝚋𝚕𝚎 𝚛𝚎𝚜𝚝𝚛𝚒𝚌𝚝*')
